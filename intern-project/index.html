@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess - Pascualex</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./javascript/chess.js"></script>
+    <style>
+        body {
+            background-image: url("temp2.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Flex container to place board and content side by side */
+        .main-container {
+            display: flex;
+            align-items: flex-start;
+            margin-left: 5%;
+            margin-top: 30px;
+        }
+
+        /* Right-side content styling */
+        .info-container {
+            margin-left: 150px;
+        }
+
+        .info-container h2,
+        .info-container h3 {
+            text-align: left;
+            color:black; /* Optional: improves readability over background */
+        }
+    </style>
+</head>
+
+<body>
+    <h1><u>Chess Game</u></h1>
+
+    <!-- Main Flex Container -->
+    <div class="main-container">
+        <!-- Chess Board -->
+        <canvas id="chessCanvas" width="400" height="400" style="margin-left: 5%;"></canvas>
+
+        <!-- Info Section -->
+        <div class="info-container">
+            <h2 id="currentTeamText">Current Turn: </h2>
+            <h2>White pieces lost:</h2>
+            <h3 id="whiteCasualities">None</h3>
+            <h2>Black pieces lost:</h2>
+            <h3 id="blackCasualities">None</h3>
+            <h2 id="totalVictories">Total Victories: </h2>
+        </div>
+    </div>
+</body>
+</html>
